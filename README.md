@@ -1,6 +1,6 @@
 # Trading-Engine-in-Camel-framework-in-Java
 
-(To view the source code, go into Trading Engine1 or Consumer or Producer, then go to src/main/java/camelinaction/)
+(To view the source code, go into Trading-Engine or Consumer or Producer, then go to src/main/java/camelinaction/)
 
 ![Alt text](https://github.com/xiaomaogy//Trading-Engine-in-Camel-framework-in-Java/blob/master/sketch1.jpg?raw=true "sketch1")
 
@@ -13,6 +13,12 @@ Then the Consumer will route the messages in that message queue to separate mess
 Afterwards the statistic calculated are feeded to the Trading Engine. Trading Engine 1 and 2 are almost the same but can run simultanously. When the trading engine receive the new statistics, it will update its own portfolio with the statistics it is interested in. It will then change its own state and then use certain trading rules based on that certain state. 
 
 ![Alt text](https://github.com/xiaomaogy//Trading-Engine-in-Camel-framework-in-Java/blob/master/sketch2.jpg?raw=true "sketch2")
+
+The Portfolio class and Stock class are extended from PortfolioComponent class, so that it can follow a composite pattern and can form a complicated file system like structure. For both classes they also have a iterator method to iterate all of its elements. 
+
+For each stock they have four states to choose from, and according to the situation it will switch between different states. This follows a State pattern which is easier to be managed. 
+
+The Reporting Engine applies a Visitor pattern, so that the function of viewing the content of the trading engine is separated out. It also applies a Singleton pattern to ensure only one instance of the reporting engine is generated. 
 
 
 
