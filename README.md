@@ -2,4 +2,4 @@
 
 This is a Trading Engine 
 
-![Alt text](/Trading-Engine-in-Camel-framework-in-Java/blob/master/project_sketch.jpg?raw=true "Optional Title")
+![Alt text](https://github.com/xiaomaogy//Trading-Engine-in-Camel-framework-in-Java/blob/master/project_sketch.jpg?raw=true "My title")
